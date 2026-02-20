@@ -75,7 +75,7 @@ public class TankShooting : MonoBehaviour
          Rigidbody shellInstance =
          Instantiate(m_Shell, m_FireTransform.position, m_FireTransform.rotation) as Rigidbody;
         // Ajusto la velocidad de la bomba en la dirección de disparo.
-        shellInstance.velocity = m_CurrentLaunchForce * m_FireTransform.forward; ;
+        shellInstance.linearVelocity = m_CurrentLaunchForce * m_FireTransform.forward; ;
         // Cambio el audio al de disparo y lo reproduzco.
         m_ShootingAudio.clip = m_FireClip;
         m_ShootingAudio.Play();
